@@ -84,3 +84,52 @@ while True:
         control_ventilation("OFF")
 
     time.sleep(60)
+
+
+
+---
+
+## 🎥 Vídeo do Projeto
+
+📺 **Demonstração do Sistema**  
+🔗 [Assistir ao vídeo do projeto](video/automacao_aviario.mp4)
+
+> *(Também pode ser um link do YouTube, Drive ou OneDrive)*
+
+---
+
+## 📄 Documentação em PDF
+
+📘 **Relatório Final / Artigo Científico**  
+🔗 [Download do PDF](pdf/relatorio_final.pdf)
+
+---
+
+## 📊 Slides de Apresentação
+
+📑 **Slides da Defesa / Apresentação Final**  
+🔗 [Acessar Slides](slides/apresentacao_final.pdf)
+
+---
+
+## 🎓 Informações Acadêmicas
+
+- **Instituição:** Universidade Federal de Mato Grosso (UFMT)  
+- **Curso:** Pós-Graduação  
+- **Área:** Automação, IoT e Avicultura de Precisão  
+- **Ano:** 2026  
+
+---
+
+## 👩‍💻 Autoria
+
+**Andreia Souza Santana da Silva**  
+Projeto de Pós-Graduação – UFMT  
+
+---
+
+## 📜 Licença
+
+Projeto de caráter acadêmico.  
+Uso permitido para fins educacionais e científicos, mediante citação da autoria.
+
