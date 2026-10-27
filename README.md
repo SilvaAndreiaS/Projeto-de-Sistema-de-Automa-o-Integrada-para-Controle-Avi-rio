@@ -7,7 +7,7 @@ Projeto de pós-graduação da **Universidade Federal de Mato Grosso (UFMT)** vo
 
 ---
 
-## 🎯 Objetivo do Projeto
+##  Objetivo do Projeto
 
 Desenvolver e validar uma arquitetura de automação híbrida capaz de:
 - Monitorar variáveis ambientais em tempo real
@@ -17,7 +17,7 @@ Desenvolver e validar uma arquitetura de automação híbrida capaz de:
 
 ---
 
-## 🧪 Metodologia
+##  Metodologia
 
 O sistema foi desenvolvido com base nos princípios da **avicultura de precisão**, utilizando sensores ambientais instalados na zona de respiração das aves (≈ 50 cm do piso).
 
@@ -38,7 +38,7 @@ Essas métricas permitiram avaliar o impacto do controle ambiental no desempenho
 
 ---
 
-## 🏗️ Dimensionamento do Aviário
+##  Dimensionamento do Aviário
 
 | Parâmetro | Especificação |
 |---------|---------------|
@@ -51,7 +51,7 @@ Essas métricas permitiram avaliar o impacto do controle ambiental no desempenho
 
 ---
 
-## 🧠 Arquitetura do Sistema
+##  Arquitetura do Sistema
 
 - Sensoriamento ambiental (temperatura, umidade, NH₃)
 - Processamento de dados em Python
@@ -61,7 +61,7 @@ Essas métricas permitiram avaliar o impacto do controle ambiental no desempenho
 
 ---
 
-## 💻 Exemplo de Código (Python)
+##  Exemplo de Código (Python)
 
 ```python
 import time
