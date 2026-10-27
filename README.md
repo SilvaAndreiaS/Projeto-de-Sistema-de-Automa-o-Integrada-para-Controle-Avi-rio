@@ -169,49 +169,6 @@ pytest
 
 ---
 
-# 7. ESTRUTURA DO PROJETO
-
-```text
-Projeto-Automacao-Aviario/
-
-├── README.md
-├── requirements.txt
-│
-├── src/
-│   ├── main.py
-│   ├── sensors.py
-│   ├── actuators.py
-│   ├── database.py
-│   ├── exportar_csv.py
-│   └── gerar_graficos.py
-│
-├── dados/
-│
-├── graficos/
-│   ├── temperatura.png
-│   ├── umidade.png
-│   ├── itgu.png
-│   └── amonia.png
-│
-├── imagens/
-│   ├── aviario_experimental.jpg
-│   ├── sensores.jpg
-│   ├── arquitetura_sistema.png
-│   └── dashboard.png
-│
-├── docs/
-│   ├── Automacao_Hibrida_em_Aviarios_Otimizacao_do_ITGU_e_Qualidade_Gasosa.pdf
-│   ├── apresentacao_projeto.pdf
-│   └── relatorio_final.pdf
-│
-├── videos/
-│   └── demonstracao_sistema.mp4
-│
-└── tests/
-```
-
----
-
 # 8. RESULTADOS
 
 ## Figura 1 – Aviário Experimental
