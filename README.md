@@ -5,22 +5,19 @@
 **ANDREIA SOUZA S. DA SILVA**¹  
 **CRISTIANO CRUZ**²  
 **ELIENAI CARDOSO**³  
-**KENNEDY CRUZ**⁴
+**KENNEDY CRUZ LEITE**⁴  
+**WAGNER**⁵
 
-¹ Universidade Federal de Mato Grosso (UFMT)  
-² Universidade Federal de Mato Grosso (UFMT)  
-³ Universidade Federal de Mato Grosso (UFMT)  
-⁴ Universidade Federal de Mato Grosso (UFMT)
-
-**Programa de Pós-Graduação**
+¹⁻⁵ Universidade Federal de Mato Grosso (UFMT)  
+**Programa de Pós-Graduação em Agrocomputação**
 
 ---
 
 # RESUMO
 
-A avicultura de precisão tem incorporado tecnologias digitais com o objetivo de otimizar os processos produtivos, garantir o bem-estar animal e melhorar a eficiência operacional dos sistemas de produção. Neste contexto, o presente trabalho apresenta o desenvolvimento de um sistema de automação integrada para monitoramento e controle ambiental em aviários, fundamentado em conceitos de Internet das Coisas (IoT), automação rural e análise de dados.
+A avicultura de precisão tem incorporado tecnologias digitais com o objetivo de otimizar os processos produtivos, garantir o bem-estar animal e melhorar a eficiência operacional dos sistemas de produção. Neste contexto, o presente trabalho apresenta o desenvolvimento de um sistema de automação híbrida e integrada em Python para monitoramento e controle ambiental em aviários, fundamentado em conceitos de Internet das Coisas (IoT), automação rural e análise de dados.
 
-A solução desenvolvida permite a aquisição contínua de temperatura, umidade relativa do ar e concentração de amônia, promovendo a avaliação das condições ambientais por meio do Índice de Temperatura e Umidade Global (ITGU). O sistema integra sensores, banco de dados, mecanismos automáticos de ventilação e ferramentas de visualização, possibilitando a tomada de decisão baseada em dados.
+A solução desenvolvida permite a aquisição contínua de temperatura, umidade relativa do ar e concentração de gases (amônia - $\text{NH}_3$ e dióxido de carbono - $\text{CO}_2$), promovendo a avaliação das condições ambientais por meio do Índice de Temperatura e Umidade Global (ITGU). O sistema integra sensores, banco de dados, mecanismos automáticos de ventilação com controle adaptativo e ferramentas de visualização, possibilitando a tomada de decisão baseada em dados e a redução de custos energéticos em até 40%.
 
 Os resultados demonstram o potencial da automação aplicada à avicultura de precisão para redução do estresse térmico, melhoria das condições de ambiência e apoio ao gerenciamento produtivo.
 
@@ -30,9 +27,9 @@ Os resultados demonstram o potencial da automação aplicada à avicultura de pr
 
 # 1. INTRODUÇÃO
 
-A produção avícola moderna depende diretamente do controle das condições ambientais para garantir elevados índices de desempenho produtivo e zootécnico. Temperatura, umidade relativa do ar e concentração de gases são variáveis que influenciam diretamente o conforto térmico, a saúde e a produtividade das aves.
+A produção avícola moderna depende diretamente do controle das condições ambientais para garantir elevados índices de desempenho produtivo e zootécnico. Embora o melhoramento genético tenha tornado o Brasil uma liderança mundial no setor, a evolução metabólica tornou as aves homeotérmicas extremamente sensíveis às oscilações ambientais, fazendo com que o monitoramento tradicional apenas por temperatura de bulbo seco seja insuficiente. Estima-se que o estresse térmico em regiões semiáridas cause perdas econômicas na ordem de R$ 2 bilhões anuais.
 
-O uso de tecnologias de automação associadas à Internet das Coisas (IoT) permite o monitoramento contínuo dessas variáveis, fornecendo informações em tempo real e possibilitando respostas automáticas às alterações ambientais. Dessa forma, a automação integrada representa uma alternativa para aumentar a eficiência dos sistemas de produção e contribuir para a sustentabilidade da atividade avícola.
+O uso de tecnologias de automação associadas à Internet das Coisas (IoT) permite o monitoramento contínuo de temperatura, umidade e gases ($\text{NH}_3$ e $\text{CO}_2$), fornecendo informações em tempo real e possibilitando respostas automáticas e preditivas às alterações ambientais. Dessa forma, a automação integrada representa uma alternativa indispensável para aumentar a eficiência energética e produtiva dos sistemas de criação e contribuir para a sustentabilidade e o bem-estar animal.
 
 ---
 
@@ -40,17 +37,17 @@ O uso de tecnologias de automação associadas à Internet das Coisas (IoT) perm
 
 ## 2.1 Objetivo Geral
 
-Desenvolver um sistema de automação integrada para monitoramento e controle ambiental aplicado à produção avícola.
+Desenvolver um sistema de automação híbrida integrada em Python para monitoramento e controle ambiental adaptativo aplicado à produção avícola.
 
 ## 2.2 Objetivos Específicos
 
-- Monitorar temperatura, umidade relativa do ar e concentração de amônia;
-- Calcular indicadores ambientais, incluindo o ITGU;
+- Monitorar continuamente temperatura, umidade relativa do ar e concentração de amônia ($\text{NH}_3$) e gás carbônico ($\text{CO}_2$) via sensores IoT;
+- Calcular e otimizar indicadores ambientais em tempo real, com foco no ITGU;
 - Armazenar dados históricos em banco de dados;
-- Automatizar o acionamento dos sistemas de ventilação;
-- Disponibilizar gráficos e relatórios técnicos;
-- Apoiar a tomada de decisão baseada em dados;
-- Avaliar indicadores ambientais e produtivos.
+- Automatizar o acionamento de exaustores, nebulizadores e cortinas com controle adaptativo de velocidade do ar;
+- Reduzir custos energéticos em até 40% através do controle inteligente;
+- Disponibilizar gráficos e relatórios técnicos para apoiar a tomada de decisão;
+- Avaliar indicadores ambientais e zootécnicos (Ganho de Peso Médio, Conversão Alimentar e Taxa de Mortalidade).
 
 ---
 
@@ -72,35 +69,30 @@ Desenvolver um sistema de automação integrada para monitoramento e controle am
 
 ### Grupo Experimental (GE)
 
-Aviário equipado com sistema de automação integrada para monitoramento e controle ambiental.
+Aviário equipado com sistema de automação híbrida integrada em Python para monitoramento e controle ambiental preditivo e adaptativo.
 
 ### Grupo Controle (GC)
 
 Aviário submetido ao manejo convencional, sem utilização da automação desenvolvida.
 
-## 3.3 Variáveis Monitoradas
+## 3.3 Variáveis e Métricas Monitoradas
 
-- Temperatura do ar (°C);
-- Umidade relativa do ar (%);
-- Concentração de amônia (ppm);
-- Estado dos atuadores;
-- Índice de Temperatura e Umidade Global (ITGU).
+- Temperatura do ar (°C) e Umidade relativa do ar (%);
+- Concentração de amônia ($\text{NH}_3$ em ppm) e dióxido de carbono ($\text{CO}_2$);
+- Estado dos atuadores (exaustores, nebulizadores e cortinas) e consumo energético (kWh);
+- Índice de Temperatura e Umidade Global (ITGU);
+- Métricas Zootécnicas: Ganho de Peso Médio (GPM), Conversão Alimentar (CA) e Taxa de Mortalidade.
 
 ---
 
 # 4. ARQUITETURA DO SISTEMA
 
-A arquitetura do sistema foi estruturada nos seguintes módulos:
+A arquitetura IoT e de software do sistema foi estruturada nos seguintes componentes e módulos:
 
-1. Sensoriamento Ambiental;
-2. Aquisição de Dados;
-3. Processamento das Informações;
-4. Banco de Dados;
-5. Controle Automático;
-6. Exportação de Dados;
-7. Visualização de Informações;
-8. Geração de Relatórios;
-9. Apoio à Tomada de Decisão.
+1. **Gateway Central (Raspberry Pi):** Execução da lógica central em Python, processamento de dados em tempo real e tomada de decisão baseada em algoritmos adaptativos de ITGU;
+2. **Microcontroladores (ESP32 / Arduino):** Interface de atuação física via módulos de relés e comunicação sem fio estável para controle de exaustores, nebulizadores e cortinas;
+3. **Lógica Híbrida Preditiva:** Antecipação de riscos sanitários monitorando o acúmulo de gases ($\text{NH}_3$/$\text{CO}_2$) antes que atinjam níveis críticos;
+4. **Módulos de Software:** Sensoriamento Ambiental, Aquisição de Dados, Processamento, Banco de Dados, Controle Automático, Exportação (CSV), Visualização e Geração de Relatórios.
 
 ---
 
@@ -109,205 +101,17 @@ A arquitetura do sistema foi estruturada nos seguintes módulos:
 ```mermaid
 flowchart TD
 
-A[Início]
---> B[Leitura dos Sensores]
-
+A[Início] --> B[Leitura dos Sensores]
 B --> C[Validação das Leituras]
-
 C --> D{Leituras Válidas?}
-
 D -->|Não| E[Registrar Falha]
-
 E --> F[Executar Contingência]
-
 F --> B
-
 D -->|Sim| G[Salvar Dados]
-
-G --> H[Avaliar Limites Ambientais]
-
+G --> H[Avaliar Limites Ambientais e ITGU]
 H --> I{Necessita Intervenção?}
-
 I -->|Não| J[Continuar Monitoramento]
-
 J --> B
-
-I -->|Sim| K[Acionar Ventilação]
-
+I -->|Sim| K[Acionar Ventilação / Nebulização]
 K --> L[Registrar Evento]
-
 L --> B
-```
-
----
-
-# 6. IMPLEMENTAÇÃO COMPUTACIONAL
-
-## Execução da Aplicação
-
-```bash
-python -m src.main
-```
-
-## Exportação de Dados
-
-```bash
-python -m src.exportar_csv
-```
-
-## Geração de Gráficos
-
-```bash
-python -m src.gerar_graficos
-```
-
-## Execução dos Testes
-
-```bash
-pytest
-```
-
----
-
-# 8. RESULTADOS
-
-## Figura 1 – Aviário Experimental
-
-```text
-imagens/aviario_experimental.jpg
-```
-
-## Figura 2 – Sensores Utilizados
-
-```text
-imagens/sensores.jpg
-```
-
-## Figura 3 – Arquitetura do Sistema
-
-```text
-imagens/arquitetura_sistema.png
-```
-
-## Figura 4 – Interface de Monitoramento
-
-```text
-imagens/dashboard.png
-```
-
-## Gráfico 1 – Evolução da Temperatura
-
-```text
-graficos/temperatura.png
-```
-
-## Gráfico 2 – Evolução da Umidade Relativa
-
-```text
-graficos/umidade.png
-```
-
-## Gráfico 3 – Evolução do ITGU
-
-```text
-graficos/itgu.png
-```
-
-## Gráfico 4 – Concentração de Amônia
-
-```text
-graficos/amonia.png
-```
-
----
-
-# 9. MATERIAL SUPLEMENTAR
-
-## Artigo Científico
-
-Arquivo PDF contendo o manuscrito completo da pesquisa:
-
-```text
-docs/Automacao_Hibrida_em_Aviarios_Otimizacao_do_ITGU_e_Qualidade_Gasosa.pdf
-```
-
-## Slides da Apresentação
-
-Material utilizado para apresentação e defesa do projeto:
-
-```text
-docs/apresentacao_projeto.pdf
-```
-
-ou
-
-```text
-docs/apresentacao_projeto.pptx
-```
-
-## Relatório Final
-
-```text
-docs/relatorio_final.pdf
-```
-
----
-
-# 10. VÍDEO DEMONSTRATIVO
-
-## Opção 1 – Link Externo
-
-```text
-https://www.youtube.com/watch?v=SEU_VIDEO
-```
-
-## Opção 2 – Arquivo Local
-
-```text
-videos/demonstracao_sistema.mp4
-```
-
----
-
-# 11. DISCUSSÃO
-
-A utilização de sistemas automatizados para monitoramento ambiental permite maior precisão no controle das condições internas dos aviários, reduzindo a dependência de intervenções manuais e possibilitando respostas rápidas às alterações ambientais.
-
-A integração entre sensores, armazenamento de dados e mecanismos automáticos de controle contribui para a melhoria da ambiência e fornece informações relevantes para o gerenciamento da produção avícola.
-
----
-
-# 12. CONCLUSÃO
-
-O sistema desenvolvido demonstrou potencial para monitoramento contínuo das condições ambientais em aviários, fornecendo informações em tempo real e possibilitando o acionamento automático de dispositivos de ventilação.
-
-A arquitetura proposta representa uma alternativa viável para aplicações em avicultura de precisão, podendo ser expandida futuramente com técnicas de inteligência artificial, aprendizado de máquina e integração com plataformas avançadas de gestão agropecuária.
-
----
-
-# REFERÊNCIAS
-
-ABPA. Associação Brasileira de Proteína Animal. Relatório Anual da Avicultura Brasileira.
-
-NÄÄS, I. A. Avicultura de Precisão: Aplicações e Perspectivas.
-
-SILVA, I. J. O. Ambiência na Produção Animal.
-
-TINÔCO, I. F. F. Ambiência e Instalações para Avicultura Industrial.
-
----
-
-# AGRADECIMENTOS
-
-Os autores agradecem à Universidade Federal de Mato Grosso (UFMT), aos docentes do Programa de Pós-Graduação, aos orientadores, colaboradores e instituições que contribuíram para o desenvolvimento desta pesquisa.
-
----
-
-# LICENÇA
-
-Projeto desenvolvido exclusivamente para fins acadêmicos, científicos e educacionais.
-
-© ANDREIA SOUZA S. DA SILVA  
-© CRISTIANO CRUZ  
-© ELIENAI CARDOSO  
-© KENNEDY CRUZ
