@@ -1,0 +1,13 @@
+RELATÓRIO DE EXECUÇÃO DE TESTES AUTOMATIZADOS - UFMT AGROCOMPUTAÇÃO
+====================================================================
+
+
+test_calculo_itgu_precisao (test_automacao.TestAutomacaoAviaria) ... ok
+test_prioridade_emergencia_gasosa (test_automacao.TestAutomacaoAviaria) ... ok
+test_validacao_sensor_esp32_norte_sucesso (test_automacao.TestAutomacaoAviaria) ... ok
+test_validacao_sensor_temperatura_invalida (test_automacao.TestAutomacaoAviaria) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
